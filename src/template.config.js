@@ -9,29 +9,7 @@ module.exports = {
             points: [ // Actions for if a user reaches above any point values.
                 // Range: The range of points for the action to trigger; Points must be lower number then higher number. 
                 // Message: "%guild" = The server name / "%points" = Their total points value when the action took place.
-                // Leave message blank ("") to disable.
-                {
-                    range: "5-7",
-                    action: "mute-1d",
-                    message: "You have been temporarily muted for one day in %guild"
-                },
-                {
-                    range: "8-11",
-                    action: "mute-7d",
-                    message: "You have been temporarily muted for seven days in %guild"
-                },
-                {
-                    range: "12-14",
-                    action: "ban-7d",
-                    message: "You have been temporarily banned for seven days in %guild"
-                },
-                {
-                    range: "15-100",
-                    action: "ban",
-                    message: "You have been permanently banned in %guild for reaching %points"
-                }
-            ],
-            roles: { // Role ID's for the guild.
+          
                 mute: "", // Used for the mute function.
                 immune: [], // Auto mod ignores anyone with the role applied.
                 admin: [] // Admins can apply, remove warnings and adjust guild settings.
